@@ -22,7 +22,6 @@
 ---
 
 ## 🖼 Скриншот интерфейса
-> *(сюда можно вставить реальный скриншот после запуска проекта)*  
 
 ![Preview](screencapture.png)
 
@@ -32,7 +31,7 @@
 
 ### 1. Клонируйте репозиторий
 ```bash
-git clone https://github.com/yourname/steamsales.git
+git clone https://github.com/PSHacks/steamsales
 cd steamsales
 ```
 
