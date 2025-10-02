@@ -1,0 +1,178 @@
+/* Основной фон сайта */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2f2f2f; /* графитовый фон */
+    color: #e0e0e0;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #252525; /* чуть темнее */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 32px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Кнопка About */
+header button {
+    background-color: #3a3a3a; /* темный графит */
+    color: #e0e0e0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+header button:hover {
+    background-color: #505050;
+}
+
+/* Контейнер с играми */
+#deals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Плитка игры */
+.tile-wrapper {
+    background-color: #383838; /* светлее графитовый фон */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.tile-wrapper:hover {
+    transform: scale(1.03);
+}
+
+/* Скидочный бейдж */
+.discount-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #ff5050;
+    color: white;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    z-index: 2;
+}
+
+/* Содержимое плитки */
+.tile img {
+    width: 100%;
+    display: block;
+}
+
+.tile .name {
+    padding: 8px;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.tile .prices {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.tile .old {
+    text-decoration: line-through;
+    color: #c0c0c0;
+}
+
+.tile .new {
+    font-weight: bold;
+    color: #ffd700; /* золотистый для цены со скидкой */
+}
+
+/* Модальное окно About */
+#aboutModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#aboutModal[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+}
+
+#aboutModal .modal-content {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    color: #e0e0e0;
+}
+
+#aboutModal .modal-content h2 {
+    margin-top: 0;
+}
+
+#aboutModal .close-btn {
+    background-color: #505050;
+    border: none;
+    color: #e0e0e0;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Секция с описанием */
+section.controls {
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+}
+
+section.controls .summary {
+    background-color: #3c3c3c; /* чуть светлее плиток */
+    border: 1px solid #555;    /* мягкая рамка */
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1em;
+    color: #e0e0e0;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* лёгкая тень */
+}
